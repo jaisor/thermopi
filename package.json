@@ -1,0 +1,28 @@
+{
+  "name": "termopi",
+  "preferGlobal": false,
+  "version": "0.1.0",
+  "author": "Jordan Marinov <jaisor@gmail.com>",
+  "description": "nano-server for temperature readings on a raspberry pi",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodejitsu/http-server.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "temperature"
+  ],
+  "dependencies" : {
+    "express" : "*",
+    "consolidate" : "*"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
