@@ -14,6 +14,9 @@ var currentTemp = Math.random() * 10 + 10;
 var serverPort = 3000;
 
 function startServer(sensors, port) {
+
+	console.log("Starting with sensors:" + JSON.stringify(sensors));
+
 	app.get('/', function(req, res){
 		var sensor;
 
@@ -59,7 +62,9 @@ function startServer(sensors, port) {
 		});
 
 		if (sensor) {
-			res.json({  temp: getSensorTemp(sensor.location) })
+			getSensorTemp(sensor.location, function(temp) {
+				res.json({ 'temp': temp })
+			});
 		} else {
 			res.send(404, { error: 'Sensor not found' });
 		}
@@ -70,8 +75,8 @@ function startServer(sensors, port) {
 }
 
 function scanSensorts() {
-	var w1 = "/tmp"; //"/sys/bus/w1/devices/";
-	var sensors = {};
+	var w1 = "/sys/bus/w1/devices/";
+	var sensors = [];
 
 /*
 	return [{
@@ -99,28 +104,31 @@ function scanSensorts() {
 
 		var w1_sensor = w1 + f + "/w1_slave";
 		
-		sensors[] = {
+		var sensor = {
 			name: f,
-        	locaiton: w1_sensor,
-        	temp: getSensorTemp(w1_sensor)
+        	location: w1_sensor,
+        	temp: null
         };
+
+        getSensorTemp(w1_sensor, function(temp) {
+        	sensor.temp = temp;
+        });
+
+        sensors.push(sensor);
 	});
 
 	return sensors;
 }
 
-function getSensorTemp(sensor) {
+function getSensorTemp(sensor, callback) {
 	
-	// return Math.random() * 20 - 20;
-
-	var result = null;
+	// callback(Math.random() * 20 - 20);
 
 	exec("cat " + sensor + " | grep t= | cut -f2 -d= | awk '{print $1/1000}'", function( error, stdout, stderr ) {
         if (error) throw error;
-        result = parseFloat(stdout).toFixed(2);
-	 });
-
-	return result;
+        callback( parseFloat(stdout).toFixed(2) );
+        
+	});
 }
 
 startServer(scanSensorts(), serverPort);

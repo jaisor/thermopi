@@ -117,7 +117,7 @@ function currentTempGauge(temp) {
             var point = chart.series[0].points[0];
                 
             $.get('temp.json', function(data) {
-                point.update(data.temp);
+                point.update(parseFloat(data.temp));
             });
     
         }, 2000);
