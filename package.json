@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "termopi",
   "preferGlobal": true,
   "version": "0.0.1",
