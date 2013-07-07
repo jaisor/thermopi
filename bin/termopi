@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+    pkg = require('../package.json'),
+    version = pkg.version,
+    TermoPi = require('../lib/termopi');
+
+program
+  .version(version)
+  .option('-p, --port <port>', 'specify the port [3000]', Number, 3000)
+  .parse(process.argv);
+
+var termopi = new TermoPi({
+        mockable: false,
+        port: program.port
+    });

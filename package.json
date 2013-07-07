@@ -24,8 +24,10 @@
     "18B20"
   ],
   "dependencies" : {
-    "express" : "*",
-    "consolidate" : "*"
+    "express" : "3.3.3",
+    "consolidate" : "0.9.1",
+    "commander": "1.2.0",
+    "merge": "1.1.1"
   },
   "engines": {
     "node": ">=0.6"
