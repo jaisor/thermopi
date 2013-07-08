@@ -46,11 +46,11 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container row-fluid">
 
-      <div class="span3 pull-left" id="currentTemp" style="min-width: 300px; min-height: 300px; margin: 0 auto;"></div>
+      <div class="span4" id="currentTemp" style="width: 300px; min-height: 300px; margin: 0 auto;"></div>
       
-      <div class="span8 pull-left" id="tempHistory" style="min-width: 400px; min-height: 300px; margin: 0 auto;"></div>
+      <div class="span8" id="tempHistory" style="min-width: 300px; min-height: 300px; margin: 0 auto;"></div>
 
     </div> <!-- /container -->
 
@@ -70,9 +70,20 @@
         var temp = {{sensor.value}};
         var currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
-        currentTempGauge(temp);
-
         $("#" + currentSensor).addClass("active");
+
+        $.sensorObservers = [];
+
+        setInterval(function() {
+            $.get('value.json', function(data) {
+                  $.sensorObservers.forEach(function (f) {
+                      f(data);
+                  });
+            });
+        }, 2000);
+
+        currentTempGauge(temp);
+        tempHistoryGraph(temp);
       });
     </script>
 

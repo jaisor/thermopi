@@ -7,7 +7,7 @@ function currentTempGauge(temp) {
             y2: 0
         };
 
-    $('#currentTemp').highcharts({
+    var chart = $('#currentTemp').highcharts({
         chart: {
             type: 'gauge',
             alignTicks: false,
@@ -111,16 +111,11 @@ function currentTempGauge(temp) {
     
     },
 
-    // Check the temperature periodically
     function(chart) {
-        setInterval(function() {
+        // Request sensor observation
+        $.sensorObservers.push( function(data) {
             var point = chart.series[0].points[0];
-                
-            $.get('value.json', function(data) {
-                point.update(parseFloat(data.value));
-            });
-    
-        }, 2000);
-    
+            point.update(parseFloat(data.value));
+        });    
     });
-};
+}

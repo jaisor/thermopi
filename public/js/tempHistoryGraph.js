@@ -1,55 +1,84 @@
-$(function () {
+function tempHistoryGraph(temp) {
+
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
 
     $('#tempHistory').highcharts({
         chart: {
-            type: 'spline'
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 10,
+            zoomType: 'x',
         },
         title: {
             text: null
         },
         xAxis: {
-            type: 'datetime'
+            type: 'datetime',
+            minRange: 1000 * 60 // 1 hour
         },
         yAxis: {
             title: {
-                text: 'Wind speed (m/s)'
+                text: null
             },
-            min: 0,
-            minorGridLineWidth: 0,
-            gridLineWidth: 0,
+            labels: {
+                useHTML: true,
+                formatter: function () {
+                    var c = this.value,
+                        f = c * 1.8 + 32.0;
+                    return Math.round(c*10)/10 + '&deg;C/' + Math.round(f*10)/10 + '&deg;F';
+                }
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
         },
         tooltip: {
             valueSuffix: ' m/s'
         },
         plotOptions: {
             spline: {
-                lineWidth: 4,
-                states: {
-                    hover: {
-                        lineWidth: 5
-                    }
-                },
+                lineWidth: 3,
                 marker: {
-                    enabled: false
+                    enabled: true
                 },
-                pointInterval: 3600000, // one hour
-                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
             }
         },
         series: [{
-            name: 'Temp',
-            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
-                7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
-                8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
-                7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
-                3.0, 3.0]
+            name: 'Temperature',
+            color: '#FF9655',
+            data: (function() {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
 
-        }]
-        ,
+                    data.push({
+                        x: time,
+                        y: temp
+                    });
+
+                    return data;
+                })()
+
+        }],
         navigation: {
             menuItemStyle: {
                 fontSize: '10px'
             }
         }
+    },
+
+    function(chart) {
+        // Request sensor observation
+        $.sensorObservers.push( function(data) {
+            var x = (new Date()).getTime();
+            chart.series[0].addPoint([Date.now(), data.value], true, false);
+        });    
     });
-});
+}
