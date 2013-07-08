@@ -39,7 +39,19 @@ function tempHistoryGraph(temp) {
             }]
         },
         tooltip: {
-            valueSuffix: ' m/s'
+            useHTML: true,
+            formatter: function () {
+                var c = this.y,
+                    f = c * 1.8 + 32.0;
+                return '<small>' + Highcharts.dateFormat('%A, %d %b %H:%M:%S', this.x) + '</small><br/><b>' 
+                    + Math.round(c*10)/10 + '&deg;C/' + Math.round(f*10)/10 + '&deg;F</b>';
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
         },
         plotOptions: {
             spline: {
