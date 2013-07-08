@@ -67,7 +67,7 @@
 
     <script type="text/javascript">
       $(function () {
-        var temp = {{sensor.value}};
+        var temp = parseFloat({{sensor.value}});
         var currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
         $("#" + currentSensor).addClass("active");
@@ -77,7 +77,7 @@
         setInterval(function() {
             $.get('value.json', function(data) {
                   $.sensorObservers.forEach(function (f) {
-                      f(data);
+                      f({value: parseFloat(data.value)});
                   });
             });
         }, 2000);
