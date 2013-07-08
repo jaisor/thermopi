@@ -53,17 +53,10 @@ function tempHistoryGraph(temp) {
             name: 'Temperature',
             color: '#FF9655',
             data: (function() {
-                    // generate an array of random data
-                    var data = [],
-                        time = (new Date()).getTime(),
-                        i;
-
-                    data.push({
-                        x: time,
+                    return [{
+                        x: Date.now(),
                         y: temp
-                    });
-
-                    return data;
+                    }];
                 })()
 
         }],
