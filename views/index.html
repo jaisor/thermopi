@@ -67,7 +67,11 @@
 
     <script type="text/javascript">
       $(function () {
-        var temp = parseFloat({{sensor.value}});
+        var sensor = {
+          name: {{sensor.name}},
+          value: parseFloat({{sensor.value}}),
+          timestamp: {{sensor.timestamp}},
+        };
         var currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
         $("#" + currentSensor).addClass("active");
@@ -77,13 +81,13 @@
         setInterval(function() {
             $.get('value.json', function(data) {
                   $.sensorObservers.forEach(function (f) {
-                      f({value: parseFloat(data.value)});
+                      f(data);
                   });
             });
         }, 2000);
 
-        currentTempGauge(temp);
-        tempHistoryGraph(temp);
+        currentTempGauge(sensor);
+        tempHistoryGraph(sensor);
       });
     </script>
 

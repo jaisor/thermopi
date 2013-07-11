@@ -1,4 +1,4 @@
-function currentTempGauge(temp) {
+function currentTempGauge(sensor) {
 
     var perShapeGradient = {
             x1: 0,
@@ -92,7 +92,7 @@ function currentTempGauge(temp) {
         }],
         series: [{
             name: 'Temperature',
-            data: [temp],
+            data: [sensor.value],
             dataLabels: {
                 useHTML: true,
                 style: {

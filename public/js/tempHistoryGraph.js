@@ -1,4 +1,4 @@
-function tempHistoryGraph(temp) {
+function tempHistoryGraph(sensor) {
 
     Highcharts.setOptions({
         global: {
@@ -66,8 +66,8 @@ function tempHistoryGraph(temp) {
             color: '#FF9655',
             data: (function() {
                     return [{
-                        x: Date.now(),
-                        y: temp
+                        x: sensor.timestamp,
+                        y: sensor.value
                     }];
                 })()
 
