@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "thermopi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jordan Marinov <jaisor@gmail.com>",
   "description": "nano-server for temperature readings on a raspberry pi",
   "repository": {
