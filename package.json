@@ -6,7 +6,7 @@
   "description": "nano-server for temperature readings on a raspberry pi",
   "repository": {
     "type": "git",
-    "url": "git@jaisor.com:thermopi-node.git"
+    "url": "git@github.com:jaisor/thermopi.git"
   },
   "main": "index",
   "bin": {
