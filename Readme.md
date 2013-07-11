@@ -23,4 +23,6 @@ You can launch the module from node directly:
 
 Or you can execute the provided binary
 
-	./bin/thermopi -p 3000; # Connect to port 80, see -h for more options
+	./bin/thermopi -p 3000; # Connect to port 3000, see -h for more options
+
+Direct your browser to the the desired port
