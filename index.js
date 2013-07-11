@@ -1,5 +1,5 @@
-var TermoPi = require('./lib/termopi'),
-    termopi = new TermoPi({
+var ThermoPi = require('./lib/thermopi'),
+    thermopi = new ThermoPi({
         mockable: true,
         port: 3000
     });

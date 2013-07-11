@@ -3,14 +3,14 @@
 var program = require('commander'),
     pkg = require('../package.json'),
     version = pkg.version,
-    TermoPi = require('../lib/termopi');
+    ThermoPi = require('../lib/thermopi');
 
 program
   .version(version)
   .option('-p, --port <port>', 'specify the port [3000]', Number, 3000)
   .parse(process.argv);
 
-var termopi = new TermoPi({
+var thermopi = new ThermoPi({
         mockable: false,
         port: program.port
     });

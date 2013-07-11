@@ -1,16 +1,16 @@
 {
   "private": true,
-  "name": "termopi",
+  "name": "thermopi",
   "version": "0.0.1",
   "author": "Jordan Marinov <jaisor@gmail.com>",
   "description": "nano-server for temperature readings on a raspberry pi",
   "repository": {
     "type": "git",
-    "url": "git@jaisor.com:termopi-node.git"
+    "url": "git@jaisor.com:thermopi-node.git"
   },
   "main": "index",
   "bin": {
-    "termopi": "./bin/termopi"
+    "thermopi": "./bin/thermopi"
   },
   "scripts": {
     "prepublish": "npm prune"
