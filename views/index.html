@@ -37,16 +37,21 @@
           <a class="brand" href="#">ThermoPi</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              {{#sensors}}
-                <li id="{{name}}"><a href="/{{name}}/">{{name}}</a></li>
-              {{/sensors}}
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sensors <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  {{#sensors}}
+                    <li id="{{name}}"><a href="/{{name}}/live">{{name}}</a></li>
+                  {{/sensors}}
+                </ul>
+              </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Period <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Live</a></li>
+                  <li class='active'><a href="/">Live</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Last Week</a></li>
-                  <li><a href="#">Last Month</a></li>
+                  <li><a href="lastWeek">Last Week</a></li>
+                  <li><a href="lastMonth">Last Month</a></li>
                 </ul>
               </li>
             </ul>
