@@ -8,20 +8,20 @@
     <meta name="author" content="Jordan Marinov">
 
     <!-- Le styles -->
-    <link href="../public/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="../public/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/public/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../public/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../public/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../public/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../public/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../public/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/public/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/public/ico/favicon.png">
   </head>
 
   <body>
@@ -41,7 +41,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sensors <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   {{#sensors}}
-                    <li id="{{name}}"><a href="/{{name}}/live">{{name}}</a></li>
+                    <li id="{{name}}"><a href="/{{name}}/live/">{{name}}</a></li>
                   {{/sensors}}
                 </ul>
               </li>
@@ -71,13 +71,13 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="../public/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../public/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../public/js/highcharts.js"></script>
-    <script type="text/javascript" src="../public/js/highcharts-more.js"></script>
+    <script type="text/javascript" src="/public/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/public/js/highcharts.js"></script>
+    <script type="text/javascript" src="/public/js/highcharts-more.js"></script>
 
-    <script type="text/javascript" src="../public/js/currentTempGauge.js"></script>
-    <script type="text/javascript" src="../public/js/tempHistoryGraph.js"></script>
+    <script type="text/javascript" src="/public/js/currentTempGauge.js"></script>
+    <script type="text/javascript" src="/public/js/tempHistoryGraph.js"></script>
 
     <script type="text/javascript">
       $(function () {
@@ -85,8 +85,9 @@
           name: "{{sensor.name}}",
           value: parseFloat({{sensor.value}}),
           timestamp: {{sensor.timestamp}},
-        };
-        var currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
+        },
+        
+        currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
         $("#" + currentSensor).addClass("active");
 
@@ -94,14 +95,16 @@
 
         setInterval(function() {
             $.get('value.json', function(data) {
-                  $.sensorObservers.forEach(function (f) {
-                      f(data);
-                  });
+                console.log(data);
+                $.sensorObservers.forEach(function (f) {
+
+                    f(data);
+                });
             });
         }, 2000);
 
         currentTempGauge(sensor);
-        tempHistoryGraph(sensor);
+        tempHistoryGraph(sensor, []);
       });
     </script>
 

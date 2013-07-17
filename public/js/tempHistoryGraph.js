@@ -1,4 +1,4 @@
-function tempHistoryGraph(sensor) {
+function tempHistoryGraph(sensor, tsd) {
 
     Highcharts.setOptions({
         global: {
@@ -70,7 +70,6 @@ function tempHistoryGraph(sensor) {
                         y: sensor.value
                     }];
                 })()
-
         }],
         navigation: {
             menuItemStyle: {
