@@ -86,7 +86,7 @@
           value: parseFloat({{sensor.value}}),
           timestamp: {{sensor.timestamp}},
         },
-        
+        tsd = [{{#tsd}}[{{timestamp}},{{value}}],{{/tsd}}]
         currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
         $("#" + currentSensor).addClass("active");
@@ -101,10 +101,10 @@
                     f(data);
                 });
             });
-        }, 2000);
+        }, 8000);
 
         currentTempGauge(sensor);
-        tempHistoryGraph(sensor, []);
+        tempHistoryGraph(sensor, tsd);
       });
     </script>
 

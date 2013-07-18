@@ -57,19 +57,22 @@ function tempHistoryGraph(sensor, tsd) {
             spline: {
                 lineWidth: 3,
                 marker: {
-                    enabled: true
+                    enabled: false
                 },
             }
         },
         series: [{
             name: 'Temperature',
             color: '#FF9655',
+            data: tsd
+            /*
             data: (function() {
                     return [{
                         x: sensor.timestamp,
                         y: sensor.value
                     }];
                 })()
+*/
         }],
         navigation: {
             menuItemStyle: {
@@ -82,7 +85,7 @@ function tempHistoryGraph(sensor, tsd) {
         // Request sensor observation
         $.sensorObservers.push( function(data) {
             var x = (new Date()).getTime();
-            chart.series[0].addPoint([Date.now(), data.value], true, false);
+            chart.series[0].addPoint([Date.now(), data.value], true, true);
         });    
     });
 }
