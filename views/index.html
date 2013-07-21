@@ -48,8 +48,9 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Period <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class='active'><a href="/">Live</a></li>
+                  <li class='active'><a href="live">Live</a></li>
                   <li class="divider"></li>
+                  <li><a href="lastDay">Last Day</a></li>
                   <li><a href="lastWeek">Last Week</a></li>
                   <li><a href="lastMonth">Last Month</a></li>
                 </ul>
@@ -86,25 +87,33 @@
           value: parseFloat({{sensor.value}}),
           timestamp: {{sensor.timestamp}},
         },
-        tsd = [{{#tsd}}[{{timestamp}},{{value}}],{{/tsd}}]
-        currentSensor = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
+        tsd = [{{#tsd}}[{{timestamp}},{{value}}],{{/tsd}}],
+        currentSensor = window.location.pathname.replace(/^\/([^\/]*)\/([^\/]*).*$/, '$1'),
+        currentPeriod = window.location.pathname.replace(/^\/([^\/]*)\/([^\/]*).*$/, '$2');
 
         $("#" + currentSensor).addClass("active");
 
         $.sensorObservers = [];
 
-        setInterval(function() {
-            $.get('value.json', function(data) {
-                console.log(data);
-                $.sensorObservers.forEach(function (f) {
+        if (currentPeriod == 'live') {
+          interval = 2000;
+          maxDataPoints = 1800;
+        } else if (currentPeriod == 'lastDay') {
+          interval = 300000;
+          maxDataPoints = 288;
+        }
 
-                    f(data);
-                });
-            });
-        }, 8000);
+        setInterval(function() {
+          $.get('value.json', function(data) {
+              //console.log(data);
+              $.sensorObservers.forEach(function (f) {
+                  f(data);
+              });
+          });
+        }, interval);
 
         currentTempGauge(sensor);
-        tempHistoryGraph(sensor, tsd);
+        tempHistoryGraph(sensor, tsd, maxDataPoints);
       });
     </script>
 
