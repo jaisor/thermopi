@@ -76,8 +76,8 @@ function tempHistoryGraph(sensor, tsd, maxDataPoints) {
     function(chart) {
         // Request sensor observation
         $.sensorObservers.push( function(data) {
-            var x = (new Date()).getTime();
-            chart.series[0].addPoint([data.timestamp, data.value], true, true);
+            console.log((chart.series[0].data.length > maxDataPoints) ? "ADD" : "SHIFT");
+            chart.series[0].addPoint([data.timestamp, data.value], true, (chart.series[0].data.length > maxDataPoints));
         });    
     });
 }

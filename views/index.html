@@ -41,18 +41,17 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sensors <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   {{#sensors}}
-                    <li id="{{name}}"><a href="/{{name}}/live/">{{name}}</a></li>
+                    <li id="{{name}}"><a href="/{{name}}/last10m/">{{name}}</a></li>
                   {{/sensors}}
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Period <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class='active'><a href="live">Live</a></li>
-                  <li class="divider"></li>
-                  <li><a href="lastDay">Last Day</a></li>
-                  <li><a href="lastWeek">Last Week</a></li>
-                  <li><a href="lastMonth">Last Month</a></li>
+                  <li id="last10m"><a href="#" id="linkLast10m">Last 10 minutes</a></li>
+                  <li id="last24h"><a href="#" id="linkLast24h">Last 24 hours</a></li>
+                  <li id="last7d"><a href="#" id="linkLast7d">Last 7 days</a></li>
+                  <li id="last30d"><a href="#" id="linkLast30d">Last 30 days</a></li>
                 </ul>
               </li>
             </ul>
@@ -69,9 +68,6 @@
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/public/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/public/js/bootstrap.js"></script>
     <script type="text/javascript" src="/public/js/highcharts.js"></script>
@@ -92,23 +88,34 @@
         currentPeriod = window.location.pathname.replace(/^\/([^\/]*)\/([^\/]*).*$/, '$2');
 
         $("#" + currentSensor).addClass("active");
+        $("#" + currentPeriod).addClass("active");
+
+        $("#linkLast10m").prop("href", "/" + currentSensor + "/last10m/");
+        $("#linkLast24h").prop("href", "/" + currentSensor + "/last24h/");
+        $("#linkLast7d").prop("href", "/" + currentSensor + "/last7d/");
+        $("#linkLast30d").prop("href", "/" + currentSensor + "/last30d/");
 
         $.sensorObservers = [];
 
-        if (currentPeriod == 'live') {
-          interval = 2000;
-          maxDataPoints = 1800;
-        } else if (currentPeriod == 'lastDay') {
-          interval = 300000;
+        if (currentPeriod == 'last10m') {
+          interval = 2 * 1000; // 2 seconds
+          maxDataPoints = 300;
+        } else if (currentPeriod == 'last24h') {
+          interval = 24 * 60 * 60 * 1000; // 5 hours
           maxDataPoints = 288;
+        } else if (currentPeriod == 'last7d') {
+          interval = 7 * 24 * 60 * 60 * 1000; // 7 days
+          maxDataPoints = 336;
+        } else if (currentPeriod == 'last30d') {
+          interval = 30 * 24 * 60 * 60 * 1000; // 30 days
+          maxDataPoints = 336;
         }
 
         setInterval(function() {
           $.get('value.json', function(data) {
-              //console.log(data);
-              $.sensorObservers.forEach(function (f) {
-                  f(data);
-              });
+            $.sensorObservers.forEach(function (f) {
+              f(data);
+            });
           });
         }, interval);
 
