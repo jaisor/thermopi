@@ -1,14 +1,11 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'publish',
-1 verbose cli   './' ]
-2 info using npm@1.2.32
-3 info using node@v0.10.12
-4 verbose publish [ './' ]
-5 verbose read json C:\Users\Jaisor\Projects\Node\thermopi-node\package.json
-6 verbose cache add [ './', null ]
-7 verbose cache add name=undefined spec="./" args=["./",null]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.2.25
+3 info using node@v0.11.3
+4 verbose publish [ '.' ]
+5 verbose read json /Users/jaisor/Projects/Node/thermopi-node/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
 8 verbose parsed url { protocol: null,
 8 verbose parsed url   slashes: null,
 8 verbose parsed url   auth: null,
@@ -18,206 +15,171 @@
 8 verbose parsed url   hash: null,
 8 verbose parsed url   search: null,
 8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: './',
-8 verbose parsed url   path: './',
-8 verbose parsed url   href: './' }
-9 silly lockFile 0ee6c175- ./
-10 verbose lock ./ C:\Users\Jaisor\AppData\Roaming\npm-cache\0ee6c175-.lock
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/jaisor/.npm/3a52ce78-.lock
 11 verbose read json package.json
-12 verbose tar pack [ 'C:\\Users\\Jaisor\\AppData\\Local\\Temp\\npm-5024\\1373531768414-0.8678171781357378\\tmp.tgz',
-12 verbose tar pack   './' ]
-13 verbose tarball C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-14 verbose folder ./
-15 info prepublish thermopi@0.0.2
+12 verbose tar pack [ '/var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+14 verbose folder .
+15 info prepublish thermopi@0.0.3
 16 verbose unsafe-perm in lifecycle true
-17 silly lockFile 04cb2bca-tar tar://./
-18 verbose lock tar://./ C:\Users\Jaisor\AppData\Roaming\npm-cache\04cb2bca-tar.lock
-19 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-20 verbose lock tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz C:\Users\Jaisor\AppData\Roaming\npm-cache\c1675a2c-68414-0-8678171781357378-tmp-tgz.lock
-21 silly lockFile 04cb2bca-tar tar://./
-22 silly lockFile 04cb2bca-tar tar://./
-23 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-24 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-25 verbose tar unpack C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-26 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-27 verbose lock tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package C:\Users\Jaisor\AppData\Roaming\npm-cache\98da16e1-68414-0-8678171781357378-package.lock
-28 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-29 verbose lock tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz C:\Users\Jaisor\AppData\Roaming\npm-cache\c1675a2c-68414-0-8678171781357378-tmp-tgz.lock
+17 silly lockFile 3a52ce78- .
+18 verbose lock . /Users/jaisor/.npm/3a52ce78-.lock
+19 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+20 verbose lock /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz /Users/jaisor/.npm/462d0714-26564-0-8508291621692479-tmp-tgz.lock
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 3a52ce78- .
+23 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+24 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+25 verbose tar unpack /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+26 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+27 verbose lock /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package /Users/jaisor/.npm/49f5c1cd-26564-0-8508291621692479-package.lock
+28 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+29 verbose lock /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz /Users/jaisor/.npm/462d0714-26564-0-8508291621692479-tmp-tgz.lock
 30 silly gunzTarPerm modes [ '755', '644' ]
 31 silly gunzTarPerm extractEntry package.json
-32 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
-33 silly gunzTarPerm extractEntry .npmignore
-34 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
-35 silly gunzTarPerm extractEntry index.js
-36 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
-37 silly gunzTarPerm extractEntry bin/thermopi
-38 silly gunzTarPerm modified mode [ 'bin/thermopi', 438, 420 ]
-39 silly gunzTarPerm extractEntry lib/sensors.js
-40 silly gunzTarPerm modified mode [ 'lib/sensors.js', 438, 420 ]
-41 silly gunzTarPerm extractEntry lib/thermopi.js
-42 silly gunzTarPerm modified mode [ 'lib/thermopi.js', 438, 420 ]
-43 silly gunzTarPerm extractEntry lib/timeseries.js
-44 silly gunzTarPerm modified mode [ 'lib/timeseries.js', 438, 420 ]
-45 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.css
-46 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.css', 438, 420 ]
-47 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.min.css
-48 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.min.css', 438, 420 ]
-49 silly gunzTarPerm extractEntry public/css/bootstrap.css
-50 silly gunzTarPerm modified mode [ 'public/css/bootstrap.css', 438, 420 ]
-51 silly gunzTarPerm extractEntry public/css/bootstrap.min.css
-52 silly gunzTarPerm modified mode [ 'public/css/bootstrap.min.css', 438, 420 ]
-53 silly gunzTarPerm extractEntry public/img/glyphicons-halflings-white.png
-54 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings-white.png', 438, 420 ]
-55 silly gunzTarPerm extractEntry public/img/glyphicons-halflings.png
-56 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings.png', 438, 420 ]
-57 silly gunzTarPerm extractEntry public/js/bootstrap.js
-58 silly gunzTarPerm modified mode [ 'public/js/bootstrap.js', 438, 420 ]
-59 silly gunzTarPerm extractEntry public/js/bootstrap.min.js
-60 silly gunzTarPerm modified mode [ 'public/js/bootstrap.min.js', 438, 420 ]
-61 silly gunzTarPerm extractEntry public/js/currentTempGauge.js
-62 silly gunzTarPerm modified mode [ 'public/js/currentTempGauge.js', 438, 420 ]
-63 silly gunzTarPerm extractEntry public/js/highcharts-more.js
-64 silly gunzTarPerm modified mode [ 'public/js/highcharts-more.js', 438, 420 ]
-65 silly gunzTarPerm extractEntry public/js/highcharts.js
-66 silly gunzTarPerm modified mode [ 'public/js/highcharts.js', 438, 420 ]
-67 silly gunzTarPerm extractEntry public/js/jquery-1.10.2.min.js
-68 silly gunzTarPerm modified mode [ 'public/js/jquery-1.10.2.min.js', 438, 420 ]
-69 silly gunzTarPerm extractEntry public/js/tempHistoryGraph.js
-70 silly gunzTarPerm modified mode [ 'public/js/tempHistoryGraph.js', 438, 420 ]
-71 silly gunzTarPerm extractEntry Readme.md
-72 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
-73 silly gunzTarPerm extractEntry views/index.html
-74 silly gunzTarPerm modified mode [ 'views/index.html', 438, 420 ]
-75 verbose read json C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package\package.json
-76 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-77 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-78 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-79 silly lockFile c1675a2c-68414-0-8678171781357378-tmp-tgz tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\tmp.tgz
-80 verbose from cache C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package\package.json
-81 verbose tar pack [ 'C:\\Users\\Jaisor\\AppData\\Roaming\\npm-cache\\thermopi\\0.0.2\\package.tgz',
-81 verbose tar pack   'C:\\Users\\Jaisor\\AppData\\Local\\Temp\\npm-5024\\1373531768414-0.8678171781357378\\package' ]
-82 verbose tarball C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-83 verbose folder C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-84 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-85 verbose lock tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package C:\Users\Jaisor\AppData\Roaming\npm-cache\98da16e1-68414-0-8678171781357378-package.lock
-86 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-87 verbose lock tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz C:\Users\Jaisor\AppData\Roaming\npm-cache\dbf1d711-cache-thermopi-0-0-2-package-tgz.lock
-88 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-89 silly lockFile 98da16e1-68414-0-8678171781357378-package tar://C:\Users\Jaisor\AppData\Local\Temp\npm-5024\1373531768414-0.8678171781357378\package
-90 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-91 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-92 silly lockFile 48e2ef57-npm-cache-thermopi-0-0-2-package C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-93 verbose lock C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package C:\Users\Jaisor\AppData\Roaming\npm-cache\48e2ef57-npm-cache-thermopi-0-0-2-package.lock
-94 silly lockFile 48e2ef57-npm-cache-thermopi-0-0-2-package C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-95 silly lockFile 48e2ef57-npm-cache-thermopi-0-0-2-package C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-96 verbose tar unpack C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-97 silly lockFile b890246a-npm-cache-thermopi-0-0-2-package tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-98 verbose lock tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package C:\Users\Jaisor\AppData\Roaming\npm-cache\b890246a-npm-cache-thermopi-0-0-2-package.lock
-99 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-100 verbose lock tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz C:\Users\Jaisor\AppData\Roaming\npm-cache\dbf1d711-cache-thermopi-0-0-2-package-tgz.lock
-101 silly gunzTarPerm modes [ '755', '644' ]
-102 silly gunzTarPerm extractEntry package.json
-103 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
-104 silly gunzTarPerm extractEntry .npmignore
-105 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
-106 silly gunzTarPerm extractEntry index.js
-107 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
-108 silly gunzTarPerm extractEntry bin/thermopi
-109 silly gunzTarPerm modified mode [ 'bin/thermopi', 438, 420 ]
-110 silly gunzTarPerm extractEntry lib/sensors.js
-111 silly gunzTarPerm modified mode [ 'lib/sensors.js', 438, 420 ]
-112 silly gunzTarPerm extractEntry lib/thermopi.js
-113 silly gunzTarPerm modified mode [ 'lib/thermopi.js', 438, 420 ]
-114 silly gunzTarPerm extractEntry lib/timeseries.js
-115 silly gunzTarPerm modified mode [ 'lib/timeseries.js', 438, 420 ]
-116 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.css
-117 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.css', 438, 420 ]
-118 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.min.css
-119 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.min.css', 438, 420 ]
-120 silly gunzTarPerm extractEntry public/css/bootstrap.css
-121 silly gunzTarPerm modified mode [ 'public/css/bootstrap.css', 438, 420 ]
-122 silly gunzTarPerm extractEntry public/css/bootstrap.min.css
-123 silly gunzTarPerm modified mode [ 'public/css/bootstrap.min.css', 438, 420 ]
-124 silly gunzTarPerm extractEntry public/img/glyphicons-halflings-white.png
-125 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings-white.png', 438, 420 ]
-126 silly gunzTarPerm extractEntry public/img/glyphicons-halflings.png
-127 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings.png', 438, 420 ]
-128 silly gunzTarPerm extractEntry public/js/bootstrap.js
-129 silly gunzTarPerm modified mode [ 'public/js/bootstrap.js', 438, 420 ]
-130 silly gunzTarPerm extractEntry public/js/bootstrap.min.js
-131 silly gunzTarPerm modified mode [ 'public/js/bootstrap.min.js', 438, 420 ]
-132 silly gunzTarPerm extractEntry public/js/currentTempGauge.js
-133 silly gunzTarPerm modified mode [ 'public/js/currentTempGauge.js', 438, 420 ]
-134 silly gunzTarPerm extractEntry public/js/highcharts-more.js
-135 silly gunzTarPerm modified mode [ 'public/js/highcharts-more.js', 438, 420 ]
-136 silly gunzTarPerm extractEntry public/js/highcharts.js
-137 silly gunzTarPerm modified mode [ 'public/js/highcharts.js', 438, 420 ]
-138 silly gunzTarPerm extractEntry public/js/jquery-1.10.2.min.js
-139 silly gunzTarPerm modified mode [ 'public/js/jquery-1.10.2.min.js', 438, 420 ]
-140 silly gunzTarPerm extractEntry public/js/tempHistoryGraph.js
-141 silly gunzTarPerm modified mode [ 'public/js/tempHistoryGraph.js', 438, 420 ]
-142 silly gunzTarPerm extractEntry Readme.md
-143 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
-144 silly gunzTarPerm extractEntry views/index.html
-145 silly gunzTarPerm modified mode [ 'views/index.html', 438, 420 ]
-146 verbose read json C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package\package.json
-147 silly lockFile b890246a-npm-cache-thermopi-0-0-2-package tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-148 silly lockFile b890246a-npm-cache-thermopi-0-0-2-package tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package
-149 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-150 silly lockFile dbf1d711-cache-thermopi-0-0-2-package-tgz tar://C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-151 verbose from cache C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package\package.json
-152 verbose chmod C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz 644
-153 silly chown skipping for windows C:\Users\Jaisor\AppData\Roaming\npm-cache\thermopi\0.0.2\package.tgz
-154 silly lockFile 0ee6c175- ./
-155 silly lockFile 0ee6c175- ./
-156 silly publish { private: false,
-156 silly publish   name: 'thermopi',
-156 silly publish   version: '0.0.2',
-156 silly publish   author: { name: 'Jordan Marinov', email: 'jaisor@gmail.com' },
-156 silly publish   description: 'nano-server for temperature readings on a raspberry pi',
-156 silly publish   repository: { type: 'git', url: 'https://github.com/jaisor/thermopi.git' },
-156 silly publish   main: 'index',
-156 silly publish   bin: { thermopi: './bin/thermopi' },
-156 silly publish   scripts: { prepublish: 'npm prune' },
-156 silly publish   keywords: [ 'raspberry', 'pi', 'temperature', 'w1', '18B20' ],
-156 silly publish   dependencies:
-156 silly publish    { express: '3.3.3',
-156 silly publish      consolidate: '0.9.1',
-156 silly publish      commander: '1.2.0',
-156 silly publish      merge: '1.1.1',
-156 silly publish      'hogan.js': '2.0.0',
-156 silly publish      cradle: '0.6.6' },
-156 silly publish   engines: { node: '>=0.6' },
-156 silly publish   readme: '## Purpose\n\nThe purpose of this node module is to provide web UI for a DS18B20 device available via W1 GPIO.\nPopilar applications are using the Raspberry Pi computer. Examples:\n\nhttp://www.raspberrypi-spy.co.uk/2013/03/raspberry-pi-1-wire-digital-thermometer-sensor/\nhttp://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware\nhttp://raspbrew.tumblr.com/\n\n## Install\n\nThermoPi requires CoachDb to be installed and available on port 5984.\nAfterwards just run\n\n    npm install thermopi\n\n## Usage \n\nThe module supports mocking in the absence of a connected W1 thermometer. \nYou can launch the module from node directly:\n\n\tnode index.js\n\nOr you can execute the provided binary\n\n\t./bin/thermopi -p 3000; # Connect to port 3000, see -h for more options\n\nDirect your browser to the the desired port',
-156 silly publish   readmeFilename: 'Readme.md',
-156 silly publish   bugs: { url: 'https://github.com/jaisor/thermopi/issues' },
-156 silly publish   _id: 'thermopi@0.0.2',
-156 silly publish   dist: { shasum: 'f695ac43e6fffc9e2ea15fdcd7d700123fa4cb63' },
-156 silly publish   _from: './' }
-157 verbose url raw thermopi
-158 verbose url resolving [ 'https://registry.npmjs.org/', './thermopi' ]
-159 verbose url resolved https://registry.npmjs.org/thermopi
-160 info trying registry request attempt 1 at 01:36:10
-161 http PUT https://registry.npmjs.org/thermopi
-162 http 409 https://registry.npmjs.org/thermopi
-163 verbose url raw thermopi
-164 verbose url resolving [ 'https://registry.npmjs.org/', './thermopi' ]
-165 verbose url resolved https://registry.npmjs.org/thermopi
-166 info trying registry request attempt 1 at 01:36:11
-167 http GET https://registry.npmjs.org/thermopi
-168 http 200 https://registry.npmjs.org/thermopi
-169 error publish fail Cannot publish over existing version.
-169 error publish fail Update the 'version' field in package.json and try again.
-169 error publish fail
-169 error publish fail If the previous version was published in error, see:
-169 error publish fail     npm help unpublish
-169 error publish fail
-169 error publish fail To automatically increment version numbers, see:
-169 error publish fail     npm help version
-170 error System Windows_NT 6.1.7601
-171 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "./"
-172 error cwd C:\Users\Jaisor\Projects\Node\thermopi-node
-173 error node -v v0.10.12
-174 error npm -v 1.2.32
-175 error code EPUBLISHCONFLICT
-176 verbose exit [ 1, true ]
+32 silly gunzTarPerm extractEntry .npmignore
+33 silly gunzTarPerm extractEntry index.js
+34 silly gunzTarPerm extractEntry Readme.md
+35 silly gunzTarPerm extractEntry bin/thermopi
+36 silly gunzTarPerm extractEntry lib/sensors.js
+37 silly gunzTarPerm extractEntry lib/thermopi.js
+38 silly gunzTarPerm extractEntry lib/timeseries.js
+39 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.css
+40 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.css', 438, 420 ]
+41 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.min.css
+42 silly gunzTarPerm modified mode [ 'public/css/bootstrap-responsive.min.css', 438, 420 ]
+43 silly gunzTarPerm extractEntry public/css/bootstrap.css
+44 silly gunzTarPerm modified mode [ 'public/css/bootstrap.css', 438, 420 ]
+45 silly gunzTarPerm extractEntry public/css/bootstrap.min.css
+46 silly gunzTarPerm modified mode [ 'public/css/bootstrap.min.css', 438, 420 ]
+47 silly gunzTarPerm extractEntry public/img/glyphicons-halflings-white.png
+48 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings-white.png', 438, 420 ]
+49 silly gunzTarPerm extractEntry public/img/glyphicons-halflings.png
+50 silly gunzTarPerm modified mode [ 'public/img/glyphicons-halflings.png', 438, 420 ]
+51 silly gunzTarPerm extractEntry public/js/bootstrap.js
+52 silly gunzTarPerm modified mode [ 'public/js/bootstrap.js', 438, 420 ]
+53 silly gunzTarPerm extractEntry public/js/bootstrap.min.js
+54 silly gunzTarPerm modified mode [ 'public/js/bootstrap.min.js', 438, 420 ]
+55 silly gunzTarPerm extractEntry public/js/currentTempGauge.js
+56 silly gunzTarPerm extractEntry public/js/highcharts-more.js
+57 silly gunzTarPerm extractEntry public/js/highcharts.js
+58 silly gunzTarPerm modified mode [ 'public/js/highcharts.js', 438, 420 ]
+59 silly gunzTarPerm extractEntry public/js/jquery-1.10.2.min.js
+60 silly gunzTarPerm modified mode [ 'public/js/jquery-1.10.2.min.js', 438, 420 ]
+61 silly gunzTarPerm extractEntry public/js/tempHistoryGraph.js
+62 silly gunzTarPerm extractEntry views/index.html
+63 verbose read json /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package/package.json
+64 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+65 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+66 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+67 silly lockFile 462d0714-26564-0-8508291621692479-tmp-tgz /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/tmp.tgz
+68 verbose from cache /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package/package.json
+69 verbose tar pack [ '/Users/jaisor/.npm/thermopi/0.0.3/package.tgz',
+69 verbose tar pack   '/var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package' ]
+70 verbose tarball /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+71 verbose folder /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+72 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+73 verbose lock /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package /Users/jaisor/.npm/49f5c1cd-26564-0-8508291621692479-package.lock
+74 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+75 verbose lock /Users/jaisor/.npm/thermopi/0.0.3/package.tgz /Users/jaisor/.npm/de01ae43-r-npm-thermopi-0-0-3-package-tgz.lock
+76 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+77 silly lockFile 49f5c1cd-26564-0-8508291621692479-package /var/folders/b3/l9fh1mw9401947g7tlv4h20r0000gn/T/npm-4227/1375048526564-0.8508291621692479/package
+78 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+79 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+80 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+81 verbose lock /Users/jaisor/.npm/thermopi/0.0.3/package /Users/jaisor/.npm/e39a43d8-aisor-npm-thermopi-0-0-3-package.lock
+82 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+83 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+84 verbose tar unpack /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+85 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+86 verbose lock /Users/jaisor/.npm/thermopi/0.0.3/package /Users/jaisor/.npm/e39a43d8-aisor-npm-thermopi-0-0-3-package.lock
+87 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+88 verbose lock /Users/jaisor/.npm/thermopi/0.0.3/package.tgz /Users/jaisor/.npm/de01ae43-r-npm-thermopi-0-0-3-package-tgz.lock
+89 silly gunzTarPerm modes [ '755', '644' ]
+90 silly gunzTarPerm extractEntry package.json
+91 silly gunzTarPerm extractEntry .npmignore
+92 silly gunzTarPerm extractEntry index.js
+93 silly gunzTarPerm extractEntry Readme.md
+94 silly gunzTarPerm extractEntry bin/thermopi
+95 silly gunzTarPerm extractEntry lib/sensors.js
+96 silly gunzTarPerm extractEntry lib/thermopi.js
+97 silly gunzTarPerm extractEntry lib/timeseries.js
+98 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.css
+99 silly gunzTarPerm extractEntry public/css/bootstrap-responsive.min.css
+100 silly gunzTarPerm extractEntry public/css/bootstrap.css
+101 silly gunzTarPerm extractEntry public/css/bootstrap.min.css
+102 silly gunzTarPerm extractEntry public/img/glyphicons-halflings-white.png
+103 silly gunzTarPerm extractEntry public/img/glyphicons-halflings.png
+104 silly gunzTarPerm extractEntry public/js/bootstrap.js
+105 silly gunzTarPerm extractEntry public/js/bootstrap.min.js
+106 silly gunzTarPerm extractEntry public/js/currentTempGauge.js
+107 silly gunzTarPerm extractEntry public/js/highcharts-more.js
+108 silly gunzTarPerm extractEntry public/js/highcharts.js
+109 silly gunzTarPerm extractEntry public/js/jquery-1.10.2.min.js
+110 silly gunzTarPerm extractEntry public/js/tempHistoryGraph.js
+111 silly gunzTarPerm extractEntry views/index.html
+112 verbose read json /Users/jaisor/.npm/thermopi/0.0.3/package/package.json
+113 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+114 silly lockFile e39a43d8-aisor-npm-thermopi-0-0-3-package /Users/jaisor/.npm/thermopi/0.0.3/package
+115 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+116 silly lockFile de01ae43-r-npm-thermopi-0-0-3-package-tgz /Users/jaisor/.npm/thermopi/0.0.3/package.tgz
+117 verbose from cache /Users/jaisor/.npm/thermopi/0.0.3/package/package.json
+118 verbose chmod /Users/jaisor/.npm/thermopi/0.0.3/package.tgz 644
+119 verbose chown /Users/jaisor/.npm/thermopi/0.0.3/package.tgz [ 501, 20 ]
+120 silly lockFile 3a52ce78- .
+121 silly publish { private: false,
+121 silly publish   name: 'thermopi',
+121 silly publish   version: '0.0.3',
+121 silly publish   author: { name: 'Jordan Marinov', email: 'jaisor@gmail.com' },
+121 silly publish   description: 'nano-server for temperature readings on a raspberry pi',
+121 silly publish   repository: { type: 'git', url: 'https://github.com/jaisor/thermopi.git' },
+121 silly publish   main: 'index',
+121 silly publish   bin: { thermopi: './bin/thermopi' },
+121 silly publish   scripts: { prepublish: 'npm prune' },
+121 silly publish   keywords: [ 'raspberry', 'pi', 'temperature', 'w1', '18B20' ],
+121 silly publish   dependencies:
+121 silly publish    { express: '3.3.3',
+121 silly publish      consolidate: '0.9.1',
+121 silly publish      commander: '1.2.0',
+121 silly publish      merge: '1.1.1',
+121 silly publish      'hogan.js': '2.0.0',
+121 silly publish      cradle: '0.6.6' },
+121 silly publish   engines: { node: '>=0.6' },
+121 silly publish   readme: '## Purpose\n\nThe purpose of this node module is to provide web UI for a DS18B20 device available via W1 GPIO.\nPopilar applications are using the Raspberry Pi computer. Examples:\n\nhttp://www.raspberrypi-spy.co.uk/2013/03/raspberry-pi-1-wire-digital-thermometer-sensor/\nhttp://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware\nhttp://raspbrew.tumblr.com/\n\n## Install\n\nThermoPi requires CoachDb to be installed and available on port 5984.\nAfterwards just run\n\n    npm install thermopi\n\n## Usage \n\nThe module supports mocking in the absence of a connected W1 thermometer. \nYou can launch the module from node directly:\n\n\tnode index.js\n\nOr you can execute the provided binary\n\n\t./bin/thermopi -p 3000; # Connect to port 3000, see -h for more options\n\nDirect your browser to the the desired port',
+121 silly publish   readmeFilename: 'Readme.md',
+121 silly publish   bugs: { url: 'https://github.com/jaisor/thermopi/issues' },
+121 silly publish   _id: 'thermopi@0.0.3',
+121 silly publish   dist: { shasum: '764a4a8c8bb06294818a00043e2e7b49f089bbee' },
+121 silly publish   _from: '.' }
+122 verbose url raw thermopi
+123 verbose url resolving [ 'https://registry.npmjs.org/', './thermopi' ]
+124 verbose url resolved https://registry.npmjs.org/thermopi
+125 info trying registry request attempt 1 at 14:56:27
+126 http PUT https://registry.npmjs.org/thermopi
+127 http 409 https://registry.npmjs.org/thermopi
+128 verbose url raw thermopi
+129 verbose url resolving [ 'https://registry.npmjs.org/', './thermopi' ]
+130 verbose url resolved https://registry.npmjs.org/thermopi
+131 info trying registry request attempt 1 at 14:56:27
+132 http GET https://registry.npmjs.org/thermopi
+133 http 200 https://registry.npmjs.org/thermopi
+134 error publish fail Cannot publish over existing version.
+134 error publish fail Update the 'version' field in package.json and try again.
+134 error publish fail
+134 error publish fail If the previous version was published in error, see:
+134 error publish fail     npm help unpublish
+134 error publish fail
+134 error publish fail To automatically increment version numbers, see:
+134 error publish fail     npm help version
+135 error System Darwin 12.4.0
+136 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+137 error cwd /Users/jaisor/Projects/Node/thermopi-node
+138 error node -v v0.11.3
+139 error npm -v 1.2.25
+140 error code EPUBLISHCONFLICT
+141 verbose exit [ 1, true ]
